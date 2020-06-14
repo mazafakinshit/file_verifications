@@ -32,4 +32,21 @@ class ZipFileTests {
 
         assertThat(actualFileText, containsString(expectedFileText));
     }
+
+
+    @Test
+    void successfulZipFileWithPasswordCheck() {
+        String source = "src/test/resources/files/files_wp.zip";
+        String destination = "src/test/resources/files/unzip_wp";
+        String password = "utochka1";
+
+        String expectedFileText = "Hello ugly world!";
+
+        new ZipUtils().unzip(source, destination, password);
+
+        String actualFileText = new FileUtils().readStringFromFile("src/test/resources/files/unzip_wp/file4.txt");
+        System.out.println("Actual text from file: \n" + actualFileText);
+
+        assertThat(actualFileText, containsString(expectedFileText));
+    }
 }
