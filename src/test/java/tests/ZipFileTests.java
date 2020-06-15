@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import utils.FileUtils;
 import utils.ZipUtils;
 
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -26,6 +27,7 @@ class ZipFileTests {
         String expectedFileText = "Hello ugly world!";
 
         new ZipUtils().unzip(source, destination);
+        sleep(10000);
 
         String actualFileText = new FileUtils().readStringFromFile("src/test/resources/files/unzip/file4.txt");
         System.out.println("Actual text from file: \n" + actualFileText);
@@ -43,6 +45,7 @@ class ZipFileTests {
         String expectedFileText = "Hello ugly world!";
 
         new ZipUtils().unzip(source, destination, password);
+        sleep(10000);
 
         String actualFileText = new FileUtils().readStringFromFile("src/test/resources/files/unzip_wp/file4.txt");
         System.out.println("Actual text from file: \n" + actualFileText);

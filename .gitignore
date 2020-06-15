@@ -33,3 +33,5 @@ target/
 .vscode
 /.allure/
 
+/src/test/resources/files/unzip/
+/src/test/resources/files/unzip_wp/
