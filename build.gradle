@@ -55,7 +55,7 @@ task file_tests(type: Test) {
 
     task zip_file_tests(type: Test) {
         useJUnitPlatform {
-            includeTags 'file'
+            includeTags 'File'
         }
     }
 }
