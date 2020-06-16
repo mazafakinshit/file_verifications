@@ -14,8 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Epic("QA.GURU automation course")
 @Story("Zip File tests")
-@Tag("Zip")
-@Tag("File")
+@Tag("zip")
 class ZipFileTests {
 
 

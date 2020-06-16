@@ -52,10 +52,10 @@ task file_tests(type: Test) {
     useJUnitPlatform {
         includeTags 'file'
     }
+}
 
-    task zip_file_tests(type: Test) {
-        useJUnitPlatform {
-            includeTags 'File'
-        }
+task zip_file_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'zip'
     }
 }

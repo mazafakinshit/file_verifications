@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Epic("QA.GURU automation course")
 @Story("File tests")
-@Tag("File")
+@Tag("file")
 class FileTests {
 
 
