@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'file.tests'
-version '1.0'
+version '1.0.1'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -50,12 +50,12 @@ tasks.withType(Test) {
 
 task file_tests(type: Test) {
     useJUnitPlatform {
-        includeTags 'file'
+        includeTags 'File'
     }
+}
 
-    task zip_file_tests(type: Test) {
-        useJUnitPlatform {
-            includeTags 'File'
-        }
+task zip_file_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'Zip'
     }
 }
